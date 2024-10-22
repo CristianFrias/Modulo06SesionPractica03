@@ -1,0 +1,1 @@
+[{"id":"733b4843-e055-48eb-82b6-bf0eaa5e2cb0","rut":"","nombre":"","apellido":""},{"id":"06848f5f-58aa-4d5e-94a1-127fd3eb4c4f","rut":"16.659.851-6","nombre":"Cristián","apellido":"Frías"}]
