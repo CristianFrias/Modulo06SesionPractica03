@@ -1,1 +1,7 @@
-[{"id":"733b4843-e055-48eb-82b6-bf0eaa5e2cb0","rut":"","nombre":"","apellido":""},{"id":"06848f5f-58aa-4d5e-94a1-127fd3eb4c4f","rut":"16.659.851-6","nombre":"Cristián","apellido":"Frías"}]
+[{"id":"6cdf8cba-c575-4f36-a06c-08a75af766f8","rut":"16.659.851-6","nombre":"Cristián","apellido":"Frías"},
+{"id":"e46f67a7-7eb6-40c4-b820-a7efbd74b660","rut":"11.111.111-1","nombre":"Juan","apellido":"Pérez"},
+{"id":"756f7557-f27d-4093-a1bb-827883c15b92","rut":"14.464.575-8","nombre":"Ivanna","apellido":"Frías"},
+{"id":"7f681b06-3966-47ec-9146-e2bc0a47a5de","rut":"6.892.477-4","nombre":"Elena del Carmen","apellido":"García"},
+{"id":"9ee03f29-4add-46bd-88b7-2415cff6397a","rut":"7.491.926-K","nombre":"Luisa","apellido":"Jimenez"},
+{"id":"87708223-e9c6-4bfb-aea4-de8d8dd0928c","rut":"8.902.960-0","nombre":"José","apellido":"López"},
+{"id":"cd6fa9ec-459a-4713-8565-c99944d94da5","rut":"12.906.914-7","nombre":"Jorge","apellido":"Frías"}]
