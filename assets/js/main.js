@@ -1,18 +1,37 @@
 const urlBase = "http://localhost:3000"
 
-// const listarPersona = () => {
-//     $.ajax({
-//         method: "GET",
-//         url:`${urlBase}/listar-persona`,
-//         data: {},
-//         success: function(data) {
-//             console.log(data); 
-//         },
-//         error: function (error) {
-            
-//         }
-//     })
-// }
+const listarPersonas = () => {
+    $.ajax({
+        method: "GET",
+        url:`${urlBase}/listar-personas`,
+        data: {},
+        success: function (data) {
+            $("#tabla-personas tbody").html(""); // MÉTODO UTILIZADO PARA ELIMINAR LO QUE HAY DENTRO DEL HTML
+            // DEBEMOS HACER UN RECORRIDO POR QUE EXISTE DATA DENTRO DE DATA
+            // FOREACH, ES APLICABLE SOLO A ESTRUCUTRAS QUE CON ARREGLOS
+            data.data.forEach(persona => {
+                // console.log(persona); // PARA VERIFICAR QUE SE ESTE MOSTRANDO
+                // APPEND SIRVE AGREGAR CONTENIDO AL HTML DESDE JS
+                $("#tabla-personas tbody").append(`
+                    <tr>
+                        <td>${persona.id}</td>
+                        <td>${persona.rut}</td>
+                        <td>${persona.nombre}</td>
+                        <td>${persona.apellido}</td>
+                    </tr>
+                `);
+            });
+            // console.log(data); 
+        },
+        error: function (error) { 
+            $("#tabla-personas tbody").html(`
+                <tr>
+                    <td colspan="4" class="text-center text-danger">No es posible consultar las personas registradas.</td>
+                </tr>
+            `);
+        }
+    })
+}
 
 // FUNCION READY
 $(() => {
@@ -38,6 +57,8 @@ $(() => {
             success: function (data) {
                 // console.log(data);
                 alert(data.message)
+                $("#txt-rut, #txt-nombre, #txt-apellido").val("") // LIMPIA EL FORMULARIO PARA LUEGO LLEVARSE ESA DATA A LISTARPERSONAS()
+                listarPersonas()
             },
             error: function (error) {
                 // console.log(error.responseJSON.message); 
@@ -51,5 +72,5 @@ $(() => {
             }
         })
     })
-    // listarPersona();
+    listarPersonas();
 })

@@ -61,8 +61,7 @@ app.get("/registrar-persona", (req, res) => {
                 nombre,
                 apellido
             }            
-            
-    
+        
             contentJS.push(persona);
     
             writeFileSync(dataPersonas, JSON.stringify(contentJS), "utf-8");
@@ -74,9 +73,11 @@ app.get("/registrar-persona", (req, res) => {
 
 })
 
-// app.get("/listar-persona", (req, res) => {
-//     const contentString = readFileSync(dataPersonas, "utf8");
-//     const contentJS = JSON.parse(contentString);
-
-//     res.json({message: "Listado de personas registradas", data: contentJS})
-// })
+// DEFINIR RUTA: LISTAR PERSONAS, DEVOLVER EL LISTADO DE PERSONAS
+app.get("/listar-personas", (req, res) => {
+    // LEO EL ARCHIVO Y REALIZAMOS BÚSQUEDA EN UN OBJETO
+    const contentString = readFileSync(dataPersonas, "utf8");
+    const contentJS = JSON.parse(contentString);
+    // RESPONDE Y DEVUELVE LA INFORMACIÓN DE LAS PERSONAS REGISTRADAS
+    res.json({message: "Listado de personas registradas", data: contentJS})
+})
